@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرسش نامه اشنایی با مهندسی برق</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    input {
+        border-radius: 2rem;
+        margin: auto;
+    }
+
+    .bg-1 {
+        background: #6983d0;
+    }
+</style>
+
+<body class="text-light text-center d-grid d-lg-flex  justify-content-center align-items-center vh-100">
+    <img src="https://farhikhtegandaily.com/images/news/83750/thumbs/83750.jpg?v=1693058060" alt=""
+        class=" d-block col-12 col-lg-6">
+    <form action="http://programming-class.ir/getquestions.php" method="post" id="form_main">
+        <!-- <form action="localhost:2000" method="post" id="form_main"> -->
+        <div class="container bg-1 shadow-lg rounded-5 p-5">
+            <label>کد دانشجویی</label>
+            <input type="text" name="code" class="d-block">
+            <label>اسم</label>
+            <input type="text" name="name" class="d-block mb-5">
+
+
+            <span class="d-block m-3">
+                <label>سوال 1</label>
+                <input type="text" name="q1">
+                <label>جواب 1</label>
+                <input type="text" name="r1">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 2</label>
+                <input type="text" name="q2">
+                <label>جواب 2</label>
+                <input type="text" name="r2">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 3</label>
+                <input type="text" name="q3">
+                <label>جواب 3</label>
+                <input type="text" name="r3">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 4</label>
+                <input type="text" name="q4">
+                <label>جواب 4</label>
+                <input type="text" name="r4">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 5</label>
+                <input type="text" name="q5">
+                <label>جواب 5</label>
+                <input type="text" name="r5">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 6</label>
+                <input type="text" name="q6">
+                <label>جواب 6</label>
+                <input type="text" name="r6">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 7</label>
+                <input type="text" name="q7">
+                <label>جواب 7</label>
+                <input type="text" name="r7">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 8</label>
+                <input type="text" name="q8">
+                <label>جواب 8</label>
+                <input type="text" name="r8">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 9</label>
+                <input type="text" name="q9">
+                <label>جواب 9</label>
+                <input type="text" name="r9">
+            </span>
+
+
+            <span class="d-block m-3">
+                <label>سوال 10</label>
+                <input type="text" name="q10">
+                <label>جواب 10</label>
+                <input type="text" name="r10">
+            </span>
+
+
+
+            <button class="btn btn-info" id="submit">ارسال</button>
+        </div>
+    </form>
+</body>
+<script>
+    let btn = document.getElementById("submit")
+    let now = new Date();
+    let form = document.getElementById("form_main")
+
+    btn.onclick = () => {
+        if (!(localStorage.getItem("data") == `${now.toDateString()} ${now.getHours()}:${now.getMinutes()}`)) {
+            localStorage.setItem("date", `${now.toDateString()} ${now.getHours()}:${now.getMinutes()}`);
+            form.submit();
+
+
+
+        }
+    }
+</script>
+
+</html>
